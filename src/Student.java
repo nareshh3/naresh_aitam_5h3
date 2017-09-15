@@ -77,12 +77,14 @@ public class Student implements Comparable {
 
 	@Override
 	public int hashCode() {
-		return this.id;
+		return super.hashCode();
 	}
 
 	@Override
 	public boolean equals(Object obj) {
-		return this.id == ((Student) obj).getId();
+		if (this == ((Student)obj))
+			return true;
+		return this.id == ((Student)obj).getId();
 	}
 	
 	
